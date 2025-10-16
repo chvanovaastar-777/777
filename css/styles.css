@@ -915,7 +915,7 @@ h5 {
   .menu-toggle {
      position: absolute;
   right: 20px; /* Отступ от правого края */
-  top: 50%;
+  top: 3%;/* кнопка по вертикали */
   transform: translateY(-50%); /* Центрируем по вертикали */
     display: flex;
     flex-direction: column;
