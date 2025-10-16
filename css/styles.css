@@ -107,9 +107,9 @@ ul {
     background-color: var(--primary-color);
 }
 
-/* Шапка */
+ Шапка */
 .header {
-    background: url("../images/fon.JPG") no-repeat center center/cover; /* фон главной страницы */
+    /*background: url("../images/fon.JPG") no-repeat center center/cover; /* фон шапки страницы */*/ 
     background-color: var(--white-color);
     box-shadow: var(--shadow);
     position: fixed;
@@ -234,7 +234,7 @@ ul {
 /* главная страница -надписи*/
 .hero {
   text-align: center;
-  background: url("../images/fon.jpg") no-repeat center center/cover;
+  background: url("../images/fon.JPG") no-repeat center center/cover;
   height: 100vh; /* экран по высоте */;
   display: flex;
   align-items: center;
