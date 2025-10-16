@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
        <!-- Подключение JavaScript -->
-    <script src="script.js"></script>
+    <script src="analytics.js" async></script>
 
 </head>
 
@@ -405,41 +405,9 @@
         </div>
     </footer>
 
+<!--здесь был скрипт-->
 
-
- <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav');
-
-    menuToggle.addEventListener('click', () => {
-        nav.classList.toggle('nav--active');
-        menuToggle.classList.toggle('menu-toggle--active');
-    });
-
-    window.addEventListener('click', (event) => {
-        if (!event.target.closest('.nav') && !event.target.closest('.menu-toggle')) {
-            nav.classList.remove('nav--active');
-            menuToggle.classList.remove('menu-toggle--active');
-        }
-    });
-
-    // закрытие меню при клике по ссылке
-    document.querySelectorAll('.nav__link').forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('nav--active');
-            menuToggle.classList.remove('menu-toggle--active');
-        });
-    });
-});
-</script>
-
-<script>
-window.addEventListener('load', () => {
-  window.scrollTo(0, 0);
-});
-</script>
-
+    <script src="js/script.js"></script>
 
 </body>
 </html>
