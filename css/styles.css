@@ -109,7 +109,7 @@ ul {
 
 /* Шапка */
 .header {
-    background: url("260925/images/fon.JPG") no-repeat center center/cover; /* фон главной страницы */
+    background: url("../images/fon.JPG") no-repeat center center/cover; /* фон главной страницы */
     background-color: var(--white-color);
     box-shadow: var(--shadow);
     position: fixed;
