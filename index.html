@@ -2,6 +2,7 @@
 <html lang="ru">
 
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Астрология финансов</title>
@@ -13,40 +14,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
+    
        <!-- Подключение JavaScript -->
     <script src="analytics.js" async></script>
 
 </head>
 
-<body><header class="header">
-  <div class="header__inner">
-    <button class="menu-toggle" aria-label="Открыть меню">
-      <span class="menu-toggle__line"></span>
-      <span class="menu-toggle__line"></span>
-      <span class="menu-toggle__line"></span>
-    </button>
-
-    <nav class="nav">
-      <ul class="nav__list">
-                                <a href="URL">
-                            <!--логотип ссылка-->
-                  <a href="index.html"><img src="./images/logo.png" height="60" width="200" /></a>
+<header class="header">
+ <div class="container">
+ <div class="header__inner">
+    
+ <!-- Логотип (слева) -->
+<div class="logo">
+  <a href="/">
+    <img src="./images/logo.png" height="60" width="200" alt="Логотип сайта">
+  </a>
+</div>
+ <!-- Центральное меню -->
+ <nav class="nav">
+ <ul class="nav__list">
         <li class="nav__item"><a href="#rab" class="nav__link">Обо мне</a></li>
         <li class="nav__item"><a href="#menu" class="nav__link">Консультации и стоимость</a></li>
         <li class="nav__item"><a href="#about" class="nav__link">Преимущество работы со мной</a></li>
-      
-        <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
-      </ul>
-    </nav>
-  </div>
+                <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+ </ul>
+ </nav>
+
+ <!-- Бургер-меню (справа, для мобильных) -->
+ <button class="menu-toggle" aria-label="Открыть меню">
+ <span class="menu-toggle__line"></span>
+ <span class="menu-toggle__line"></span>
+ <span class="menu-toggle__line"></span>
+ </button>
+ </div>
+ </div>
 </header>
 <!--надписи на главной-->
     <main class="main">
+        <!--<a href="index.html"><img src="./images/logo.png" height="60" width="200" /></a>-->
+        
         <section class="hero">
             <div class="container">
                 <h1 class="hero__title">Анна Вихарева</h1>
                 <p class="hero__subtitle">Астрология финансов</p>
                 <p class="hero__subtitle">успех и богатство с помощью астрологии</p>
+                                  
                 <div class="hero__buttons">
 
                     <a href="mailto:achvanov777@bk.ru" class="btn btn--primary">Заказать услугу</a>
