@@ -134,13 +134,20 @@ ul {
     color: var(--dark-color);
 }
 
+
+
+
+
+
 .logo span {
     color: var(--primary-color);
 }
 
 .nav__list {
     display: flex;
-    gap: 30px;
+    gap: 0px;
+        margin: 0;
+    padding: 0;
 }
 
 .nav__link {
@@ -171,17 +178,24 @@ ul {
 
 /* Стили для бургер-меню */
 .menu-toggle {
-    display: none;
-    cursor: pointer;
-    padding: 10px;
+  display: none;
+  cursor: pointer;
+  margin-top: 30px; /* Сдвигает вниз на 30px */
+  padding: 10px;
+  background: none;
+  border: none;
+  position: relative;
+  z-index: 1000; /* Чтобы кнопка была поверх других элементов */
 }
 
 .menu-toggle__line {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--dark-color);
-    margin: 4px 0;
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--dark-color);
+  margin: 6px 0; /* Исправленный отступ */
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
 }
 
 @media (max-width: 768px) {
