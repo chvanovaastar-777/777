@@ -36,7 +36,7 @@
         <li class="nav__item"><a href="#rab" class="nav__link">Обо мне</a></li>
         <li class="nav__item"><a href="#menu" class="nav__link">Консультации и стоимость</a></li>
         <li class="nav__item"><a href="#about" class="nav__link">Преимущество работы со мной</a></li>
-                <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+        <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
  </ul>
  </nav>
 
@@ -51,7 +51,8 @@
 </header>
 <!--надписи на главной-->
     <main class="main">
-        <!--<a href="index.html"><img src="./images/logo.png" height="60" width="200" /></a>-->
+        <!--<a href="index.html">
+            <img src="./images/logo.png" height="60" width="200" /></a>-->
         
         <section class="hero">
             <div class="container">
@@ -61,7 +62,11 @@
                                   
                 <div class="hero__buttons">
 
-                    <a href="mailto:achvanov777@bk.ru" class="btn btn--primary">Заказать услугу</a>
+                   <a  href="mailto:achvanov777@bk.ru"
+ class="btn btn--primary"
+ title="Нажмите, откроется Ваш почтовый клиент - отправляйте сообщение на указанный e-mail">
+ Заказать услугу
+</a>
 
                 </div>
             </div>
@@ -384,7 +389,7 @@
             <div class="footer__inner">
                 <div class="footer__logo">
                     <a href="index.html"><img src="./images/logo.png" height="60" width="200" /></a>
-                    <p class="footer__text">Разработка лендингов и сайтов визиток</p>
+                  
                 </div>
                 <div class="footer__nav">
                     <h3 class="footer__title">Навигация</h3>
@@ -410,15 +415,30 @@
                 
                 <a href="mailto:achvanov777@bk.ru"> <u>📧 vikhara@yandex.ru</u></a>
                 <p></p>
-                 <a href="mailto:achvanov777@bk.ru"> <u>разработка дизайна: achvanov777@bk.ru </u></a>
-                
                 <p class="footer__copyright">2025г. </p>
+                <div class="full-line"></div>
+
+<hr class="hr-line">
+
+ <!-- линия над моей почтой -->
+<style> 
+.hr-line {
+	margin: 20px 0;
+	padding: 0;
+	height: 0;
+	border: none;
+	border-top: 1px solid #111865;
+}
+</style>
+</style> 
+<a href="mailto:achvanov777@bk.ru"> <u>разработка дизайна: achvanov777@bk.ru </u></a>
             </div>
         </div>
     </footer>
 
+<!-- Подключение стилей и скриптов "Плтажека" -->
 
-<!-- Подключение стилей и скриптов -->
+
 <link rel="stylesheet" href="styles.css">
 <script src="payment.js" defer></script>
 
@@ -426,6 +446,8 @@
     <h2>Оплата картой</h2>
     
     <form id="cardForm">
+
+
         <!-- Поле для имени владельца карты -->
         <div class="form-group">
             <label for="cardholder">Имя владельца карты</label>
@@ -438,66 +460,6 @@
             >
         </div>
 
-        <!-- Поле для номера карты -->
-        <div class="form-group">
-            <label for="cardNumber">Номер карты</label>
-            <input 
-                type="text" 
-                id="cardNumber" 
-                name="cardNumber" 
-                autocomplete="cc-number" 
-                inputmode="numeric" 
-                pattern="[0-9]{13,19}" 
-                placeholder="0000 0000 0000 0000" 
-                required
-            >
-        </div>
-
-        <!-- Поля для срока действия и CVV -->
-        <div class="form-group">
-            <div class="expiry-cvv">
-                <!-- Срок действия -->
-                <div class="expiry">
-                    <label for="expiryMonth">Срок действия</label>
-                    <input 
-                        type="text" 
-                        id="expiryMonth" 
-                        name="expiryMonth" 
-                        autocomplete="cc-exp-month" 
-                        maxlength="2" 
-                        inputmode="numeric" 
-                        placeholder="MM" 
-                        required
-                    >
-                    <span>/</span>
-                    <input 
-                        type="text" 
-                        id="expiryYear" 
-                        name="expiryYear" 
-                        autocomplete="cc-exp-year" 
-                        maxlength="2" 
-                        inputmode="numeric" 
-                        placeholder="YY" 
-                        required
-                    >
-                </div>
-
-                <!-- CVV код -->
-                <div class="cvv">
-                    <label for="cvv">CVV</label>
-                    <input 
-                        type="password" 
-                        id="cvv" 
-                        name="cvv" 
-                        autocomplete="cc-csc" 
-                        maxlength="4" 
-                        inputmode="numeric" 
-                        placeholder="XXX" 
-                        required
-                    >
-                </div>
-            </div>
-        </div>
 
         <!-- Кнопка отправки -->
         <button type="submit">Оплатить</button>
@@ -505,12 +467,10 @@
 </div>
 
 
-
-
-<!--здесь был скрипт-->
+<!--сслыка на скрипты (бургер меню например)-->
 
     <script src="js/script.js"></script>
-<script src="payment.js"></script>
+
 
 
 </body>
