@@ -74,6 +74,40 @@
  Заказать услугу
 </a>
 
+<!-- Кнопка открытия формы -->
+<button id="openFormBtn" class="btn btn--primary">Заказать услугу</button>
+
+<!-- Модалка -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Заказать услугу</h2>
+    <form id="contactForm">
+      <label>Ваше имя
+        <input type="text" name="name" required>
+      </label>
+      <label>Ваш email
+        <input type="email" name="email" required>
+      </label>
+      <label>Сообщение
+        <textarea name="message" required></textarea>
+      </label>
+      <button type="submit" class="btn btn--primary">Отправить</button>
+    </form>
+    <p id="formMessage" style="color:green; display:none;">Спасибо! Ваше сообщение готово к отправке.</p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+					
 
                 </div>
             </div>
