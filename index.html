@@ -76,8 +76,7 @@
             </div>
         </section>
 
-<!-- Ставим кнопку, открывающую модалку -->
-<button id="openFormBtn" class="btn btn--primary" type="button">Заказать услугу</button>
+<button id="openModalBtn" class="btn btn--primary">Отправить заявку</button>
 
 
 
@@ -348,41 +347,28 @@
 btn btn--primary" type="button">Заказать услугу</button>
 Вставьте в любое место внутри <body>, лучше перед </body>, этот HTML для модального окна (форма будет отправляться на Formspree — замените YOUR_FORMSPREE_ID на ваш id):
 
-html
-Копировать код
-<!-- Modal form (вставьте перед закрывающим </body>) -->
-<div id="overlay" class="overlay" aria-hidden="true" style="display:none">
-  <div class="modal" role="dialog" aria-modal="true">
-    <button id="closeBtn" class="modal-close" aria-label="Закрыть">&times;</button>
-    <h2>Заказать услугу</h2>
-    <form id="applyForm" action="https://formspree.io/f/xyznaglj" method="POST">
-      <div class="field">
-        <label for="name">Имя*</label>
-        <input id="name" name="name" type="text" required />
-      </div>
-      <div class="field">
-        <label for="email">Email*</label>
-        <input id="email" name="email" type="email" required />
-      </div>
-      <div class="field">
-        <label for="phone">Телефон</label>
-        <input id="phone" name="phone" type="tel" />
-      </div>
-      <div class="field">
-        <label for="message">Сообщение</label>
-        <textarea id="message" name="message" rows="4"></textarea>
-      </div>
-      <!-- Formspree требует скрытого поля _subject или _replyto опционально -->
-      <input type="hidden" name="_subject" value="Новая заявка с сайта Астрология финансов">
-      <div class="actions">
-        <button type="button" id="modalClose">Отмена</button>
-        <button type="submit" class="btn btn--primary">Отправить</button>
-      </div>
-      <div id="formStatus" aria-live="polite" style="margin-top:10px"></div>
+
+
+<!-- МОДАЛЬНОЕ ОКНО -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Отправить заявку</h2>
+    <form id="contactForm">
+      <label for="name">Ваше имя:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Ваш e-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Сообщение:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit" class="btn btn--primary">Отправить</button>
     </form>
+    <p id="form-status"></p>
   </div>
 </div>
-
 
 
 
