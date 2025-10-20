@@ -971,7 +971,7 @@ h5 {
     transform: translateY(-8.5px) rotate(-45deg);
   }
 
-    .modal {
+    /* .modal {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -1012,7 +1012,7 @@ h5 {
 
 .modal-content button {
   width: 100%;
-}
+}*/
 
 
 
