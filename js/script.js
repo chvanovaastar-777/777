@@ -40,3 +40,41 @@ window.addEventListener('load', () => {
 });
 
 
+// === МОДАЛЬНОЕ ОКНО ===
+const modal = document.getElementById('modal');
+const openModalBtn = document.getElementById('openModalBtn');
+const closeBtn = document.querySelector('.close');
+const form = document.getElementById('contactForm');
+const statusText = document.getElementById('form-status');
+
+openModalBtn.addEventListener('click', () => {
+  modal.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+// === ОТПРАВКА ФОРМЫ ===
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  
+  const formData = new FormData(form);
+  
+  const response = await fetch('sendmail.php', {
+    method: 'POST',
+    body: formData
+  });
+  
+  const result = await response.text();
+  statusText.textContent = result;
+  form.reset();
+});
+
+
