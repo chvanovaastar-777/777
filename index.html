@@ -369,6 +369,29 @@
 
 
 
+
+
+<!-- Модальное окно -->
+<div id="overlay" class="overlay" style="display:none;" aria-hidden="true">
+  <div class="modal">
+    <button id="closeModalBtn" class="close">&times;</button>
+    <h2>Оставьте заявку</h2>
+    <form id="applyForm" action="https://formspree.io/f/ВАШ_КОД" method="POST">
+      <label>Имя:<br><input type="text" name="name" required></label><br>
+      <label>Email:<br><input type="email" name="email" required></label><br>
+      <label>Сообщение:<br><textarea name="message" required></textarea></label><br>
+      <button type="submit" class="btn btn--primary">Отправить</button>
+    </form>
+    <div id="formStatus" style="margin-top:10px;"></div>
+  </div>
+</div>
+
+
+
+
+
+				
+
 </body>
 </html>
 
