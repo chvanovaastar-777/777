@@ -80,6 +80,37 @@
 
 <button id="openModalBtn"
 
+<!-- ===== МОДАЛЬНОЕ ОКНО ===== -->
+<div id="overlay" class="overlay" style="display:none" aria-hidden="true">
+  <div class="modal">
+    <button id="closeModalBtn" class="modal-close" aria-label="Закрыть">✕</button>
+    <h2>Заказать услугу</h2>
+
+    <!-- Замените ACTION на ваш Formspree endpoint ниже -->
+    <form id="applyForm" action="https://formspree.io/f/xyznaglj" method="POST">
+      <label for="m_name">Имя *</label>
+      <input id="m_name" name="name" type="text" required>
+
+      <label for="m_email">Email *</label>
+      <input id="m_email" name="email" type="email" required>
+
+      <label for="m_phone">Телефон</label>
+      <input id="m_phone" name="phone" type="tel">
+
+      <label for="m_message">Сообщение</label>
+      <textarea id="m_message" name="message" rows="4"></textarea>
+
+      <!-- Доп. поля Formspree (опционально) -->
+      <input type="hidden" name="_subject" value="Новая заявка с сайта">
+      <div style="margin-top:12px">
+        <button type="submit" class="btn btn--primary">Отправить</button>
+      </div>
+      <div id="formStatus" aria-live="polite" style="margin-top:10px"></div>
+    </form>
+  </div>
+</div>
+  </div>
+</div>
 
 
 
@@ -335,46 +366,6 @@
 
     <!--сслыка на скрипты (бургер меню например)-->
     <script src="js/script.js"></script>
-
-
-
-
-
-
-
-
-
-<!-- ===== МОДАЛЬНОЕ ОКНО ===== -->
-<div id="overlay" class="overlay" style="display:none" aria-hidden="true">
-  <div class="modal">
-    <button id="closeModalBtn" class="modal-close" aria-label="Закрыть">✕</button>
-    <h2>Заказать услугу</h2>
-
-    <!-- Замените ACTION на ваш Formspree endpoint ниже -->
-    <form id="applyForm" action="https://formspree.io/f/xyznaglj" method="POST">
-      <label for="m_name">Имя *</label>
-      <input id="m_name" name="name" type="text" required>
-
-      <label for="m_email">Email *</label>
-      <input id="m_email" name="email" type="email" required>
-
-      <label for="m_phone">Телефон</label>
-      <input id="m_phone" name="phone" type="tel">
-
-      <label for="m_message">Сообщение</label>
-      <textarea id="m_message" name="message" rows="4"></textarea>
-
-      <!-- Доп. поля Formspree (опционально) -->
-      <input type="hidden" name="_subject" value="Новая заявка с сайта">
-      <div style="margin-top:12px">
-        <button type="submit" class="btn btn--primary">Отправить</button>
-      </div>
-      <div id="formStatus" aria-live="polite" style="margin-top:10px"></div>
-    </form>
-  </div>
-</div>
-  </div>
-</div>
 
 
 
