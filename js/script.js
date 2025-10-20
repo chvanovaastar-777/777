@@ -12,12 +12,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     menuToggle.addEventListener('click', toggleMenu);
 
-    window.addEventListener('click', (event) => {
-        if (!event.target.closest('.nav') && !event.target.closest('.menu-toggle')) {
-            nav.classList.remove('nav--active');
-            menuToggle.classList.remove('menu-toggle--active');
-        }
-    });
+  window.addEventListener('click', (event) => {
+  // Если клик был внутри меню или по кнопке меню — не закрываем
+  if (
+    event.target.closest('.nav') ||
+    event.target.closest('.menu-toggle') ||
+    event.target.closest('#openModalBtn') ||   // 👈 добавлено
+    event.target.closest('#overlay')           // 👈 добавлено
+  ) {
+    return;
+  }
+  
+  nav.classList.remove('nav--active');
+  menuToggle.classList.remove('menu-toggle--active');
+});
 
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape' && nav.classList.contains('nav--active')) {
@@ -107,5 +115,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
 
 
