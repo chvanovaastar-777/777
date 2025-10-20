@@ -40,41 +40,72 @@ window.addEventListener('load', () => {
 });
 
 
-// === МОДАЛЬНОЕ ОКНО ===
-const modal = document.getElementById('modal');
-const openModalBtn = document.getElementById('openModalBtn');
-const closeBtn = document.querySelector('.close');
-const form = document.getElementById('contactForm');
-const statusText = document.getElementById('form-status');
+document.addEventListener('DOMContentLoaded', function() {
+  const openBtn = document.getElementById('openModalBtn');
+  const overlay = document.getElementById('overlay');
+  const closeBtn = document.getElementById('closeModalBtn');
+  const form = document.getElementById('applyForm');
+  const statusBox = document.getElementById('formStatus');
 
-openModalBtn.addEventListener('click', () => {
-  modal.style.display = 'block';
-});
-
-closeBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-window.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    modal.style.display = 'none';
-  }
-});
-
-// === ОТПРАВКА ФОРМЫ ===
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  
-  const formData = new FormData(form);
-  
-  const response = await fetch('sendmail.php', {
-    method: 'POST',
-    body: formData
+  // Если вы случайно оставили старую mailto ссылку, переключаем её поведение
+  // (ищем <a href="mailto:..."> в hero и отключаем переход)
+  document.querySelectorAll('a[href^="mailto:"]').forEach(a => {
+    // если нужно — можно отключать только определённую ссылку по тексту или классу
+    a.addEventListener('click', function(e){
+      // предотвращаем открытие почтового клиента и откроем модалку вместо этого
+      e.preventDefault();
+      openModal();
+    });
   });
-  
-  const result = await response.text();
-  statusText.textContent = result;
-  form.reset();
+
+  function openModal() {
+    overlay.style.display = 'flex';
+    overlay.setAttribute('aria-hidden', 'false');
+    const first = overlay.querySelector('input,textarea,button');
+    if (first) first.focus();
+  }
+  function closeModal() {
+    overlay.style.display = 'none';
+    overlay.setAttribute('aria-hidden', 'true');
+  }
+
+  openBtn && openBtn.addEventListener('click', openModal);
+  closeBtn && closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', (e)=> { if (e.key === 'Escape') closeModal(); });
+
+  // Обработка отправки: Formspree вернёт 200 и перенаправление — мы перехватим ответ для UX
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      statusBox.textContent = 'Отправка...';
+      const action = form.getAttribute('action');
+      try {
+        const formData = new FormData(form);
+        const resp = await fetch(action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (resp.ok) {
+          const data = await resp.json();
+          // Formspree возвращает { "success": true } или пустой объект
+          statusBox.style.color = 'green';
+          statusBox.textContent = '✅ Заявка отправлена! Спасибо.';
+          form.reset();
+          setTimeout(closeModal, 1500);
+        } else {
+          const err = await resp.json();
+          statusBox.style.color = 'red';
+          statusBox.textContent = err?.error || 'Ошибка отправки. Попробуйте позже.';
+        }
+      } catch (err) {
+        console.error(err);
+        statusBox.style.color = 'red';
+        statusBox.textContent = 'Сетевая ошибка. Проверьте интернет.';
+      }
+    });
+  }
 });
 
 
