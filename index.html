@@ -76,7 +76,7 @@
             </div>
         </section>
 
-<button id="openModalBtn" class="btn btn--primary">Отправить заявку</button>
+<button id="openModalBtn" class="btn btn--primary" type="button">Заказать услугу</button>
 
 
 
@@ -344,29 +344,35 @@
 
 
 
-btn btn--primary" type="button">Заказать услугу</button>
-Вставьте в любое место внутри <body>, лучше перед </body>, этот HTML для модального окна (форма будет отправляться на Formspree — замените YOUR_FORMSPREE_ID на ваш id):
+<!-- ===== МОДАЛЬНОЕ ОКНО ===== -->
+<div id="overlay" class="overlay" style="display:none" aria-hidden="true">
+  <div class="modal">
+    <button id="closeModalBtn" class="modal-close" aria-label="Закрыть">✕</button>
+    <h2>Заказать услугу</h2>
 
+    <!-- Замените ACTION на ваш Formspree endpoint ниже -->
+    <form id="applyForm" action="https://formspree.io/f/xyznaglj" method="POST">
+      <label for="m_name">Имя *</label>
+      <input id="m_name" name="name" type="text" required>
 
+      <label for="m_email">Email *</label>
+      <input id="m_email" name="email" type="email" required>
 
-<!-- МОДАЛЬНОЕ ОКНО -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Отправить заявку</h2>
-    <form id="contactForm">
-      <label for="name">Ваше имя:</label>
-      <input type="text" id="name" name="name" required>
+      <label for="m_phone">Телефон</label>
+      <input id="m_phone" name="phone" type="tel">
 
-      <label for="email">Ваш e-mail:</label>
-      <input type="email" id="email" name="email" required>
+      <label for="m_message">Сообщение</label>
+      <textarea id="m_message" name="message" rows="4"></textarea>
 
-      <label for="message">Сообщение:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-
-      <button type="submit" class="btn btn--primary">Отправить</button>
+      <!-- Доп. поля Formspree (опционально) -->
+      <input type="hidden" name="_subject" value="Новая заявка с сайта">
+      <div style="margin-top:12px">
+        <button type="submit" class="btn btn--primary">Отправить</button>
+      </div>
+      <div id="formStatus" aria-live="polite" style="margin-top:10px"></div>
     </form>
-    <p id="form-status"></p>
+  </div>
+</div>
   </div>
 </div>
 
