@@ -116,5 +116,39 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+const modal = document.getElementById("contactModal");
+const openBtn = document.getElementById("openFormBtn");
+const closeBtn = document.querySelector(".close");
+const form = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+
+// Открытие модалки
+openBtn.onclick = () => modal.style.display = "block";
+
+// Закрытие модалки
+closeBtn.onclick = () => modal.style.display = "none";
+
+// Закрытие при клике вне формы
+window.onclick = (e) => {
+  if (e.target == modal) modal.style.display = "none";
+};
+
+// Отправка формы через mailto
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = form.name.value;
+  const email = form.email.value;
+  const message = form.message.value;
+
+  const mailtoLink = `mailto:vikhara@yandex.ru?subject=Заказ услуги от ${encodeURIComponent(name)}&body=${encodeURIComponent("Имя: " + name + "\nEmail: " + email + "\nСообщение: " + message)}`;
+
+  // Открыть почтовый клиент пользователя
+  window.location.href = mailtoLink;
+
+  // Показать сообщение об успехе
+  form.style.display = "none";
+  formMessage.style.display = "block";
+});
 
 
