@@ -973,52 +973,6 @@ h5 {
 
 
 
-  
-/* Базовые стили для формы */
-#order-form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Стили для полей ввода */
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-/* Стили для кнопки */
-#order-button {
-    background-color: #232174;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#order-button:hover {
-    background-color: #c05a1f;
-}
-
-
-.payment-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #f9f9f9;
-}
-
-.form-group {
-    margin-bottom: 1;
-
-}
 
 }
     
