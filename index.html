@@ -65,12 +65,15 @@
                 <p class="hero__subtitle">успех и богатство с помощью астрологии</p>
                                   
                 <div class="hero__buttons">
-				<button id="openModalBtn" class="btn btn--primary" type="button">Заказать услугу</button>
+
+<!-- Ставим кнопку, открывающую модалку -->
+<button id="openFormBtn" class="btn btn--primary" type="button">Заказать услугу</button>
                    <!--<a  href="mailto:vikhara@yandex.ru"
  class="btn btn--primary"
  title="Нажмите, откроется Ваш почтовый клиент - отправляйте сообщение на указанный e-mail">
  Заказать услугу
-</a> -->
+</a>-->
+
 
                 </div>
             </div>
@@ -78,39 +81,8 @@
 
 
 
-<!--<button id="openModalBtn"-->
 
-<!-- ===== МОДАЛЬНОЕ ОКНО ===== -->
-<div id="overlay" class="overlay" style="display:none" aria-hidden="true">
-  <div class="modal">
-    <button id="closeModalBtn" class="modal-close" aria-label="Закрыть">✕</button>
-    <h2>Заказать услугу</h2>
 
-    <!-- Замените ACTION на ваш Formspree endpoint ниже -->
-    <form id="applyForm" action="https://formspree.io/f/xyznaglj" method="POST">
-      <label for="m_name">Имя *</label>
-      <input id="m_name" name="name" type="text" required>
-
-      <label for="m_email">Email *</label>
-      <input id="m_email" name="email" type="email" required>
-
-      <label for="m_phone">Телефон</label>
-      <input id="m_phone" name="phone" type="tel">
-
-      <label for="m_message">Сообщение</label>
-      <textarea id="m_message" name="message" rows="4"></textarea>
-
-      <!-- Доп. поля Formspree (опционально) -->
-      <input type="hidden" name="_subject" value="Новая заявка с сайта">
-      <div style="margin-top:12px">
-        <button type="submit" class="btn btn--primary">Отправить</button>
-      </div>
-      <div id="formStatus" aria-live="polite" style="margin-top:10px"></div>
-    </form>
-  </div>
-</div>
-  </div>
-</div>
 
 
 
@@ -371,27 +343,50 @@
 
 
 
-<!-- Модальное окно -->
-<div id="overlay" class="overlay" style="display:none;" aria-hidden="true">
-  <div class="modal">
-    <button id="closeModalBtn" class="close">&times;</button>
-    <h2>Оставьте заявку</h2>
+
+
+
+
+btn btn--primary" type="button">Заказать услугу</button>
+Вставьте в любое место внутри <body>, лучше перед </body>, этот HTML для модального окна (форма будет отправляться на Formspree — замените YOUR_FORMSPREE_ID на ваш id):
+
+html
+Копировать код
+<!-- Modal form (вставьте перед закрывающим </body>) -->
+<div id="overlay" class="overlay" aria-hidden="true" style="display:none">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button id="closeBtn" class="modal-close" aria-label="Закрыть">&times;</button>
+    <h2>Заказать услугу</h2>
     <form id="applyForm" action="https://formspree.io/f/xyznaglj" method="POST">
-      <label>Имя:<br><input type="text" name="name" required></label><br>
-      <label>Email:<br><input type="email" name="email" required></label><br>
-      <label>Сообщение:<br><textarea name="message" required></textarea></label><br>
-      <button type="submit" class="btn btn--primary">Отправить</button>
+      <div class="field">
+        <label for="name">Имя*</label>
+        <input id="name" name="name" type="text" required />
+      </div>
+      <div class="field">
+        <label for="email">Email*</label>
+        <input id="email" name="email" type="email" required />
+      </div>
+      <div class="field">
+        <label for="phone">Телефон</label>
+        <input id="phone" name="phone" type="tel" />
+      </div>
+      <div class="field">
+        <label for="message">Сообщение</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+      </div>
+      <!-- Formspree требует скрытого поля _subject или _replyto опционально -->
+      <input type="hidden" name="_subject" value="Новая заявка с сайта Астрология финансов">
+      <div class="actions">
+        <button type="button" id="modalClose">Отмена</button>
+        <button type="submit" class="btn btn--primary">Отправить</button>
+      </div>
+      <div id="formStatus" aria-live="polite" style="margin-top:10px"></div>
     </form>
-    <div id="formStatus" style="margin-top:10px;"></div>
   </div>
 </div>
 
 
 
 
-
-				
-
 </body>
 </html>
-
