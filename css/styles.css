@@ -1098,3 +1098,17 @@ input, textarea {
 .header, .menu-toggle {
   z-index: 1000;
 }
+
+#openModalBtn {
+  position: relative;
+  z-index: 1100;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999 !important;
+}
+
+
