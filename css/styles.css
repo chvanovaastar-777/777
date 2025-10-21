@@ -64,17 +64,9 @@ ul {
 }
 
 .btn {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 4px;
-    font-weight: 600;
-    text-align: center;
-    cursor: pointer;
-    transition: var(--transition);
-    border: none;
-    font-size: 1rem;
+  margin-top: auto; /* "прибивает" кнопку к низу */
+  align-self: flex-start;
 }
-
 .btn--primary {
     background-color: var(--primary-color);
     color: var(--white-color);
@@ -480,15 +472,16 @@ ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
+  align-items: stretch; /* Все карточки одинаковой высоты */
 }
 
 .menu-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* чтобы кнопка всегда была снизу */
-  background: #fff;
+  justify-content: space-between; /* распределяет контент по вертикали */
+  background-color: #fff;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   padding: 1.5rem;
 }
 
@@ -500,9 +493,7 @@ ul {
 
 
 .menu-item__header {
-    display: grid; /* Используется Grid */
-    justify-content: space-between; /* Но у тебя тут нет двух элементов, так что можно flex */
-    margin-bottom: 10px; /* Отступ снизу */
+  margin-bottom: 1rem;
 }
 
 .menu-item__title {
@@ -516,6 +507,12 @@ ul {
     color: var(--dark-color); /* Темный цвет */
 }
 
+
+    .price {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+    
 .menu-item__description {
     color: var(--gray-color); /* Серый текст */
     font-size: 0.9rem; /* Чуть меньше шрифт */
