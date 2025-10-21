@@ -78,6 +78,7 @@ ul {
 .btn--primary {
     background-color: var(--primary-color);
     color: var(--white-color);
+    
 }
 
 .btn--primary:hover {
@@ -476,16 +477,19 @@ ul {
 }
 
 .menu__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
 }
 
 .menu-item {
-    background-color: var(--light-color); /* Светлый фон карточки */
-    padding: 25px; /* Внутренние отступы */
-    border-radius: 8px; /* Скругленные углы */
-    transition: var(--transition); /* Плавный hover-эффект */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* чтобы кнопка всегда была снизу */
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
 }
 
 .menu-item:hover {
