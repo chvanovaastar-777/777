@@ -69,6 +69,8 @@ ul {
   transition: var(--transition);
   cursor: pointer;
   box-shadow: 1 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 150px; /* или auto для подгонки */
+  border-radius: 50px;
 }
 
 .btn--primary {
@@ -236,6 +238,15 @@ ul {
     .nav__item {
         margin: 15px 0;
     }
+@media (min-width: 769px) {
+  .btn {
+    border-radius: 12px; /* меньше скругление на широких экранах */
+  }
+}
+
+
+
+
 }
 
 /* Стили для активного состояния бургер-меню */
