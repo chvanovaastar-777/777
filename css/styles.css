@@ -69,8 +69,6 @@ ul {
   transition: var(--transition);
   cursor: pointer;
   box-shadow: 1 4px 10px rgba(0, 0, 0, 0.1);
-    min-width: 150px; /* или auto для подгонки */
-  border-radius: 50px;
 }
 
 .btn--primary {
@@ -81,6 +79,7 @@ ul {
 }
 
 .btn--primary:hover {
+    
     background-color: #9c9d9f;/* цвет наведения кнопки заказать услугу */
     transform: translateY(-2px); /* смещение при наведении кнопки */
     box-shadow: var(--shadow);
@@ -238,15 +237,6 @@ ul {
     .nav__item {
         margin: 15px 0;
     }
-@media (min-width: 769px) {
-  .btn {
-    border-radius: 12px; /* меньше скругление на широких экранах */
-  }
-}
-
-
-
-
 }
 
 /* Стили для активного состояния бургер-меню */
@@ -810,8 +800,61 @@ h5 {
   .menu-toggle.menu-toggle--active .menu-toggle__line:nth-child(3) {
     transform: translateY(-8.5px) rotate(-45deg);
   }
+.social-links {
+    display: flex;
+    justify-content: center; /* выравнивание по центру */
+    align-items: center;
+    gap: 40px;               /* расстояние между иконками */
+    flex-wrap: wrap;          /* перенос на узких экранах */
+    margin: 30px 0;
+}
 
-    
+.social-links {
+    display: flex;
+    justify-content: center; /* выравнивание по центру */
+    align-items: flex-start; /* не растягиваем дочерние элементы */
+    gap: 40px;               /* расстояние между иконками */
+    flex-wrap: wrap;          /* перенос на маленьких экранах */
+    margin: 30px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* flex-start или center — не stretch! */
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.social-link {
+    flex: 0 0 auto;   /* запрещаем растягивание блоков */
+}
+
+.social-link img {
+    width: 10px;       /* фиксированный размер на ПК */
+    height: 10px;
+    max-width: 5px;   /* запрещаем браузеру увеличивать */
+    max-height:20px;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+/* Подпись о запрете Instagram */
+.note {
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+    .social-link img {
+        width: 35px;
+        height: 35px;
+        max-width: 35px;
+        max-height: 35px;
+    }
+}
+
 
 }
     
