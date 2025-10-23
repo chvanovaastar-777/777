@@ -1,19 +1,16 @@
 /* Базовые стили */
 :root {
---primary-color: #232174; /* Основной цвет текста кнопок */
-    --primary-color-hover: #c05a1f; /* Цвет при наведении на кнопки */
+--primary-color: #5e5e64; /* Основной цвет текста кнопок */
+    --primary-color-hover: #73665e; /* Цвет при наведении на кнопки */
     --secondary-color: #84aec4; /* Дополнительный цвет */
-    --dark-color: #090651; /* Очень темный цвет для акцентов */
-    --light-color: #756f6f2b; /* Светлый полупрозрачный цвет */
-    --white-color: #d1eaf6; /* Светлый цвет для фона */
+    --dark-color: #272224; /* цвет подвала и заголовков */
+    --light-color: rgba(117, 111, 111, 0.17); /* Светлый полупрозрачный цвет */
+    --white-color: #bcbcbc; /* цвет для фона плашек */
     --text-color: #0a0202; /* Основной цвет текста */
-    --gray-color: #0b0101; /* Серый цвет для второстепенных элементов */
+    --gray-color: #333; /* Серый цвет для второстепенных элементов */
     
     --shadow: 0 4px 6px rgba(73, 69, 69, 0.1); /* Тень для элементов */
     --transition: all 0.3s ease; /* Базовое значение для переходов */
-}
-
-* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -74,8 +71,8 @@ ul {
 }
 
 .btn--primary:hover {
-    background-color: #0d2754;
-    transform: translateY(-2px);
+    background-color: #74777a;/* цвет наведения кнопки заказать услугу */
+    transform: translateY(-2px); /* смещение при наведении кнопки */
     box-shadow: var(--shadow);
 }
 
@@ -86,7 +83,7 @@ ul {
 }
 
 .btn--outline:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(46, 177, 39, 0.1);
     transform: translateY(-2px);
 }
 
@@ -136,10 +133,6 @@ ul {
     font-weight: 700;
     color: var(--dark-color);
 }
-
-
-
-
 
 
 .logo span {
@@ -255,7 +248,7 @@ ul {
   height: 100vh; /* экран по высоте */;
   display: flex;
   align-items: center;
-  color: rgb(223, 207, 203); /* текст*/
+  color: rgb(238, 235, 235); /* текст Анна Вихарева....*/
 }
 
 
@@ -267,17 +260,17 @@ ul {
 
 .hero__subtitle {
     font-size: 1.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .hero__buttons {
-    margin-top: 20px;   
-  margin-bottom: 20px; 
+    margin-top: 50px;   
+  margin-bottom: 30px; 
     display: flex;
-    gap: 10px;
+    gap: 30px;
     justify-content: center;
 }
 
@@ -313,7 +306,7 @@ ul {
       margin-top: 20px;
       padding: 12px 25px;
       background-color: #007BFF;
-      color: #ffffff;
+      color: #d51717;
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
@@ -379,7 +372,7 @@ ul {
 }
 
 
-/*  Об астрологии финансов */
+/*  Об астрологии финансов 
 .rab {
     padding: 80px 0;
 }
@@ -421,7 +414,7 @@ ul {
     margin-right: 15px;
     color: var(--primary-color);
     font-size: 1.2rem;
-}
+}*/
 
 
 /* Консультации и стоимость */
@@ -448,7 +441,7 @@ ul {
     font-size: 1rem;
     cursor: pointer; /* Курсор-рука */
     transition: var(--transition); /* Плавные эффекты */
-    color: var(--gray-color); /* Серый текст */
+    color: var(---color); /* Серый текст */
 }
 
 .tab-btn.active {
@@ -479,14 +472,14 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* распределяет контент по вертикали */
-  background-color: #fff;
+  background-color: #e7e6e6;/* цвет плашек услуг */
   border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(18, 69, 199, 0.1);/* тень от плашек */
   padding: 1.5rem;
 }
 
 .menu-item:hover {
-    transform: translateY(-5px); /* Легкий подъем при наведении */
+    transform: translateY(-2px); /* Легкий подъем при наведении */
     box-shadow: var(--shadow); /* Тень при наведении */
 }
 
@@ -506,7 +499,6 @@ ul {
     font-weight: 700; /* Жирный */
     color: var(--dark-color); /* Темный цвет */
 }
-
 
     .price {
   font-weight: bold;
@@ -528,11 +520,10 @@ h5 {
 }
 
 
-
 .menu-item__header2 {
-    display: flexd; 
+    display: flex; 
     justify-content: space-between; /* Но у тебя тут нет двух элементов, так что можно flex */
-    margin-bottom: 30px; /* Отступ снизу */
+    margin-bottom:20px; /* Отступ снизу */
 }
 
 .menu-item__title2 {
@@ -543,142 +534,14 @@ h5 {
 }
 
 
-/* сотрудничество 
-.reviews {
-    padding: 80px 0;
-    background-color: var(--light-color);
-}
-
-.reviews__slider {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.review {
-    background-color: var(--white-color);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-
-.review:hover {
-    transform: translateY(-5px);
-}
-
-.review__rating {
-    color: #FFD700;
-    margin-bottom: 15px;
-}
-
-.review__text {
-    font-style: italic;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.review__text::before {
-    content: '"';
-    font-size: 3rem;
-    color: var(--secondary-color);
-    position: absolute;
-    top: -20px;
-    left: -10px;
-    opacity: 0.3;
-}
-
-.review__author {
-    display: flex;
-    align-items: center;
-}
-
-.review__photo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 15px;
-}
-
-.review__name {
-    font-weight: 600;
-} 
-
-/* Контакты */
-
-/*.contacts 
-
-    padding: 80px 0;
-    
-
-.contacts_info {
-    text-align: center;
-}
-
-
-
-.contacts__inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.contact-icon {
-    margin-right: 15px;
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    width: 20px;
-    text-align: center;
-}
-
-.contacts__map {
-    height: 400px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-}
-
-.social-links {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-
-}
-
-.social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--light-color);
-    color: var(--primary-color);
-    transition: var(--transition);
-}
-
-.social-link:hover {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    transform: translateY(-3px);
-}
-
-
 .to-top {
   position: fixed;        /* Кнопка всегда на экране */
-  bottom: 50px;           /* Отступ снизу */
-  right: 50px;            /* Отступ справа */
+  bottom: 0px;           /* Отступ снизу */
+  right: 0px;            /* Отступ справа */
   width: 50px;
   height: 50px;
   border: none;
-  border-radius: 50%;     /* Круглая форма */
+  border-radius: 100%;     /* Круглая форма */
   background: var(--primary-color); /* Акцентный цвет */
   color: #fff;            /* Белая стрелка */
   font-size: 1.5rem;
@@ -917,7 +780,7 @@ h5 {
     top: 68px; /* подкорректируй под высоту header */
     left: 0;
     right: 0;
-    background: #fff;
+    background: #e1dddd; /* цвет выпадающей меню */
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -958,7 +821,7 @@ h5 {
   .menu-toggle__line {
     height: 5px;
     border-radius: 2px;
-    background: #2c11d8;
+    background: #868689;/* цвет бургер кнопки */
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
   /* анимация в крестик */
@@ -972,50 +835,7 @@ h5 {
     transform: translateY(-8.5px) rotate(-45deg);
   }
 
-    /* .modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.6);
-  overflow: auto;
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 400px;
-  position: relative;
-}
-
-.close {
-  position: absolute;
-  right: 15px;
-  top: 10px;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.modal-content input,
-.modal-content textarea {
-  width: 100%;
-  padding: 8px;
-  margin: 8px 0 16px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.modal-content button {
-  width: 100%;
-}*/
-
-
+    
 
 }
     
