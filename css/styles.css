@@ -113,7 +113,8 @@ ul {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: var(--dark-color);
-    padding-bottom: 15px;
+    padding-bottom: 10px;
+    padding-top: 40px;
 }
 
 .section-title::after {
@@ -425,14 +426,15 @@ ul {
 /* Консультации и стоимость */
 
 .menu {
-    padding: 80px 0;/* отступ над консультацией*/
+   padding-top: 0px;   /* уменьшили сверху */
+    padding-bottom: 80px; /* оставили снизу */
     background-color: var(--white-color);
 }
 
 .menu__tabs {
     display: flex; /* Выстраивает кнопки в ряд */
     justify-content: center; /* Центрует их по горизонтали */
-    margin-bottom: 30px; /* Отступ снизу */
+    margin-bottom: 50px; /* Отступ снизу */
     gap: 100 /* Расстояние между кнопками */
 }
 
