@@ -987,6 +987,61 @@ h5 {
     gap: 12px;
     margin-left: 8px;
   }
+
+.hero {
+  background-image: url("../images/fon.JPG");
+  background-size: cover;           /* изображение растягивается пропорционально */
+  background-position: center center; /* центрируется по горизонтали и вертикали */
+  background-repeat: no-repeat;
+  background-attachment: scroll;    /* фон двигается вместе со страницей */
+  
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: rgb(238, 235, 235);
+  padding: 0 20px;
+  overflow: hidden; /* предотвращает случайный сдвиг */
 }
+
+/* ====== Мобильная версия ====== */
+@media (max-width: 768px) {
+  .hero {
+    background-size: cover;       /* не меняем масштаб, чтобы не съезжало */
+    background-position: center;  /* строго центрируем */
+    text-align: right;
+    padding-left: 1px;           /* надписи правее */
+    padding-right: 20px;
+  }
+
+  .hero__title,
+  .hero__subtitle {
+    margin-left: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
     
