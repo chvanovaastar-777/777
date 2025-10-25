@@ -72,24 +72,23 @@ ul {
 }
 
 .btn--primary {
-   background-color: #382f77; /* цвет кнопок */
-   box-shadow: var(--shadow);
-   color: var(--white-color);
-   padding: 10px 25px;        /* отступы внутри */
-   font-size: 1.2rem;
-   border-radius: 50px;
-   cursor: pointer;
-   transition: var(--transition);
-   /* убираем transform по умолчанию */
+    display: block;
+    margin: 0 auto;
+    background-color: #382f77;
+    color: var(--white-color);
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
 }
 
 .btn--primary:hover {
-    
-   background-color: #152e62; /* цвет при наведении */
-   transform: translateY(-3px); /* сдвиг только при наведении */
-   box-shadow: var(--shadow);
+    background-color: #152e62;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
 }
-
 /* Контурная кнопка */
 .btn--outline {
   background-color: transparent;
