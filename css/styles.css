@@ -143,7 +143,8 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 7px;
+    padding-top: 12px;   /* уменьшили сверху */
+    padding-bottom: 0px; /* оставили снизу */
     
 
 }
@@ -426,7 +427,7 @@ ul {
 /* Консультации и стоимость */
 
 .menu {
-   padding-top: 0px;   /* уменьшили сверху */
+   padding-top: 30px;   /* уменьшили сверху */
     padding-bottom: 80px; /* оставили снизу */
     background-color: var(--white-color);
 }
