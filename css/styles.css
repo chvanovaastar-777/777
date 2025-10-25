@@ -1012,7 +1012,7 @@ h5 {
     background-position: center;  /* строго центрируем */
     text-align: right;
     padding-left: 1px;           /* надписи правее */
-    padding-right: 20px;
+    padding-right: 250px;
   }
 
   .hero__title,
