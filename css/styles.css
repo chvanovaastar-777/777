@@ -900,5 +900,63 @@ h5 {
   }
 }
 
+/* === СЕКЦИЯ "КОНСУЛЬТАЦИИ И СТОИМОСТЬ" === */
+.menu_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px; /* одинаковые поля слева и справа */
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Карточки */
+.menu-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Заголовки */
+.menu-item__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .menu__grid {
+    grid-template-columns: 1fr; /* все карточки в одну колонку */
+    gap: 24px;
+  }
+
+  .menu_container {
+    padding: 0 12px; /* мягкие боковые отступы */
+  }
+
+  .menu-item {
+    padding: 16px;
+  }
+}
+
+/* Убираем горизонтальную прокрутку */
+body {
+  overflow-x: hidden;
+}
+
+
 }
     
