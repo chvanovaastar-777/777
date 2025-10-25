@@ -354,6 +354,11 @@ ul {
     justify-content: center;
     margin-bottom: 530px;
     gap: 100px; /* добавлена единица px */
+    
+}
+
+.menu-item__header {
+  margin-bottom: 1rem;
 }
 
 .menu__container {
@@ -394,10 +399,14 @@ ul {
 }
 
 .menu__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
-    align-items: start;
+      display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* адаптивные колонки */
+  justify-content: center;  /* центрируем всю сетку */
+  gap: 2rem;                /* расстояние между карточками */
+  padding: 0 2rem;          /* отступы от краёв экрана */
+  align-items: start;       /* выравнивание карточек по верхнему краю */
+  box-sizing: border-box;
+    
 }
 
 .menu-item {
@@ -409,6 +418,9 @@ ul {
     box-shadow: 0 4px 10px rgba(18, 69, 199, 0.1);
     padding: 1.5rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%; /* карточки одинаковой высоты */
+       
+ 
 }
 
 .menu-item:hover {
