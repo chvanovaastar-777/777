@@ -108,7 +108,7 @@ ul {
 .section-title::before {
     content: "";
     display: block;
-    height: 90px; /* высота header */
+    height: 100px; /* высота header */
     margin-top: -80px; /* сдвигает контент вверх */
     visibility: hidden; /* не видно */
 }
