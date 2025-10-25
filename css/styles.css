@@ -1,12 +1,12 @@
 /* Базовые стили */
 :root {
---primary-color: #666693; /* Основной цвет текста кнопок */
+--primary-color: #4949ac; /* Основной цвет заголовка и линии */
     --primary-color-hover: #73665e; /* Цвет при наведении на кнопки */
     --secondary-color: #84aec4; /* Дополнительный цвет */
     --dark-color: #272224; /* цвет подвала и заголовков */
     --light-color: rgba(117, 111, 111, 0.17); /* Светлый полупрозрачный цвет */
     --white-color: #bcbcbc; /* цвет для фона плашек */
-    --text-color: #37393c; /* Основной цвет текста */
+    --text-color: #2a2c2f; /* Основной цвет текста */
     --gray-color: #333; /* Серый цвет для второстепенных элементов */
     
     --shadow: 0 4px 6px rgba(73, 69, 69, 0.1); /* Тень для элементов */
@@ -72,17 +72,22 @@ ul {
 }
 
 .btn--primary {
-   background-color: #a2a6ab;/* цвет кнопок */
-  transform: translateY(-3px); /* чуть выше при наведении */
-  box-shadow: var(--shadow);
-    
+   background-color: #382f77; /* цвет кнопок */
+   box-shadow: var(--shadow);
+   color: var(--white-color);
+   padding: 10px 25px;        /* отступы внутри */
+   font-size: 1.2rem;
+   border-radius: 50px;
+   cursor: pointer;
+   transition: var(--transition);
+   /* убираем transform по умолчанию */
 }
 
 .btn--primary:hover {
     
-    background-color: #9c9d9f;/* цвет наведения кнопки заказать услугу */
-    transform: translateY(-2px); /* смещение при наведении кнопки */
-    box-shadow: var(--shadow);
+   background-color: #152e62; /* цвет при наведении */
+   transform: translateY(-3px); /* сдвиг только при наведении */
+   box-shadow: var(--shadow);
 }
 
 /* Контурная кнопка */
@@ -90,6 +95,7 @@ ul {
   background-color: transparent;
   color: var(--white-color);
   border: 2px solid var(--white-color);
+
 }
 
 /* Наведение на контурную */
@@ -98,12 +104,16 @@ ul {
   transform: translateY(-3px);
 }
 
+.section-title-wrapper {
+    text-align: center; /* центрируем дочерний inline-block заголовок */
+}
+
 .section-title {
+    display: inline-block; /* ширина под текст */
+    position: relative;
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    text-align: center;
     color: var(--dark-color);
-    position: relative;
     padding-bottom: 15px;
 }
 
@@ -111,9 +121,8 @@ ul {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 250px;
+    left: 0;      /* линия начинается с левого края заголовка */
+    width: 100%;  /* линия повторяет ширину текста */
     height: 3px;
     background-color: var(--primary-color);
 }
