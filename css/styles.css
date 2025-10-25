@@ -380,10 +380,28 @@ ul {
 .about__text {
     margin-bottom: 20px;
     text-align: left;
-        }
+            }
 
+.about__text2 {
+  
+  font-weight: 600;           /* Лёгкая жирность для акцента */
+  font-size: 20px;            /* Читаемый размер */
+  color: #333;                /* Тёмно-серый для лёгкости чтения */
+  line-height: 1.6;           /* Межстрочный интервал */
+  margin-bottom: 20px;        /* Отступ снизу */
+  text-align: justify;           /* Выравнивание по левому краю */
+  letter-spacing: 0.5px;      /* Немного увеличенное межбуквие для воздушности */
+  transition: color 0.3s ease; /* Плавное изменение цвета при hover */
+}
 
-
+.about__text2:hover {
+  color: #000; /* Тёмнее при наведении */
+}
+.about__text3 {
+    margin-bottom:14px;
+    text-align: left;
+    font-size: 20px;            /* Читаемый размер */
+            }
 
 
 
