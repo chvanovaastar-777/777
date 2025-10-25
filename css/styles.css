@@ -379,7 +379,13 @@ ul {
 
 .about__text {
     margin-bottom: 20px;
-}
+    text-align: left;
+        }
+
+
+
+
+
 
 .about__features {
     margin-top: 30px;
@@ -1019,28 +1025,3 @@ h5 {
     margin-right: 20px;          /* добавлены px */
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-    
