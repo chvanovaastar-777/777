@@ -22,6 +22,8 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--light-color);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -86,6 +88,8 @@ ul {
 /* ===== Заголовки с линией ===== */
 .section-title-wrapper {
     text-align: center;
+    padding: 10px;
+   
 }
 
 .section-title {
@@ -94,7 +98,7 @@ ul {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: var(--dark-color);
-    padding: 40px 0 10px 0;
+    padding: 10px 0 10px 0;
 }
 
 .section-title::after {
@@ -112,17 +116,20 @@ ul {
     background-color: var(--white-color);
     box-shadow: var(--shadow);
     position: fixed;
-    width: 100%;
+    width: 98.6%;
     top: 0;
-    left: 0;
+    left: ;
     z-index: 1000;
+    
 }
 
 .header__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 0;
+    padding: 10px 10;
+      padding-top: 10px;   /* сверху */
+    padding-bottom: 0px; /* снизу */
 }
 
 .logo {
@@ -139,6 +146,7 @@ ul {
     display: flex;
     gap: 20px;
     align-items: center;
+    margin-right: 50px;  <!-- сдвиг шапки впрво-->
 }
 
 .nav__list {
@@ -256,7 +264,10 @@ ul {
 
 /* ===== About ===== */
 .about {
-    padding: 40px 0;
+    padding-top: 20px;    /* внутренний отступ сверху */
+    padding-bottom: 20px; /* внутренний отступ снизу */
+    margin-top: 20px;     /* внешний отступ сверху (от предыдущей секции) */
+    margin-bottom: 10px;  /* внешний отступ снизу (до следующей секции) */
 }
 
 .about__inner {
@@ -289,32 +300,35 @@ ul {
     text-align: center;
     margin: 0 auto;
     flex: 1 1 300px;
+    
 }
 
 .about__text,
 .about__text3 {
-    margin-bottom: 14-20px;
+    margin-bottom: 1px; /* можно выбрать любое подходящее значение */
     text-align: left;
     font-size: 20px;
+    padding: 0;
 }
 
 .about__text2 {
-    font-weight: 600;
-    font-size: 20px;
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    text-align: justify;
-    letter-spacing: 0.5px;
-    transition: color 0.3s ease;
+    font-weight: 600;            /* жирность текста для акцента */
+    font-size: 20px;             /* размер шрифта */
+    color: #333;                 /* цвет текста */
+    line-height: 1.6;            /* межстрочный интервал */
+    margin-bottom: 1px;         /* нижний отступ */
+    text-align: justify;          /* выравнивание текста по ширине */
+    letter-spacing: 0.5px;       /* межбуквенное расстояние */
+  
+    margin-top: 5px;     /* внешний отступ сверху (от предыдущей секции) */
+    margin-bottom: 5px;  /* внешний отступ снизу (до следующей секции) */
 }
 
-.about__text2:hover {
-    color: #000;
-}
+
+
 
 .about__features {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .feature-item {
@@ -331,14 +345,14 @@ ul {
 
 /* ===== Menu / Консультации ===== */
 .menu {
-    padding: 30px 0 80px 0;
+    padding: 10px 0 80px 0;
     background-color: var(--white-color);
 }
 
 .menu__tabs {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 530px;
     gap: 100px; /* добавлена единица px */
 }
 
