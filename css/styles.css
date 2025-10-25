@@ -217,7 +217,11 @@ ul {
     .menu-toggle {
         display: block;
     }
-
+@media (max-width: 768px) {
+    .section-title::after {
+        display: none;
+    }
+}
     .nav {
         position: fixed;
         top: 0;
