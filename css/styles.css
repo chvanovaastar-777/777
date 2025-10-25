@@ -635,6 +635,20 @@ ul {
         display: none; /* убираем подчеркивание на мобильных */
     }
 
+@media (max-width: 768px) {
+    .section-title::before {
+        content: "";
+        display: block;
+        height: 120px; /* высота header на мобильных */
+        margin-top: -120px;
+        visibility: hidden;
+    }
+}
+
+
+
+
+
     .nav.nav--active { max-height: 420px; padding: 12px 0; }
     .nav__list { flex-direction: column; width: 100%; gap: 0; }
     .nav__item { width: 100%; text-align: center; border-bottom: 1px solid rgba(0,0,0,0.04); }
