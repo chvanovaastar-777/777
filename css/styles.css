@@ -29,7 +29,10 @@ body {
 h1, h2, h3, h4, h5 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
+    
 }
+
+
 
 img {
     max-width: 100%;
@@ -92,6 +95,7 @@ ul {
    
 }
 
+
 .section-title {
     display: inline-block;
     position: relative;
@@ -99,6 +103,14 @@ ul {
     margin-bottom: 2rem;
     color: var(--dark-color);
     padding: 40px 0 10px 0;
+}
+
+.section-title::before {
+    content: "";
+    display: block;
+    height: 90px; /* высота header */
+    margin-top: -80px; /* сдвигает контент вверх */
+    visibility: hidden; /* не видно */
 }
 
 .section-title::after {
@@ -616,11 +628,13 @@ ul {
         z-index: 1000;
         box-shadow: 0 6px 18px rgba(0,0,0,0.06);
     }
+
+
 @media (max-width: 768px) {
     .section-title::after {
         display: none; /* убираем подчеркивание на мобильных */
     }
-}
+
     .nav.nav--active { max-height: 420px; padding: 12px 0; }
     .nav__list { flex-direction: column; width: 100%; gap: 0; }
     .nav__item { width: 100%; text-align: center; border-bottom: 1px solid rgba(0,0,0,0.04); }
