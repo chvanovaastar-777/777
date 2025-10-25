@@ -1,0 +1,19 @@
+
+# robots.txt для сайта "Астрология финансов" Анны Вихаревой
+# Разрешаем индексировать весь контент, кроме служебных папок
+
+User-agent: *
+Allow: /
+
+# Закрываем технические директории от индексации
+Disallow: /css/
+Disallow: /js/
+Disallow: /images/
+Disallow: /tmp/
+Disallow: /admin/
+
+# Указываем путь к карте сайта (создадим ниже)
+Sitemap: https://astroleader.ru/sitemap.xml
+
+# Указываем основной домен (особенно важно для Яндекс)
+Host: astroleader.ru
