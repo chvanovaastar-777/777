@@ -656,10 +656,12 @@ h5 {
     
     .hero__title {
         font-size: 2.8rem;
+          margin-left: 0; /* по умолчанию без отступа */
     }
     
     .hero__subtitle {
         font-size: 1.3rem;
+          margin-left: 0; /* по умолчанию без отступа */
     }
     
     .about__inner {
@@ -692,6 +694,13 @@ h5 {
         align-items: center; /* Центрируем все элементы */
     }
 }
+
+@media (max-width: 768px) {
+  .hero__title,
+  .hero__subtitle {
+    margin-left: 20px; /* сдвигаем надписи правее */
+  }
+}
     .nav.active {
         left: 0;
     }
@@ -718,8 +727,9 @@ h5 {
     }
     
     .hero {
-        height: auto;
-        padding: 120px 0 80px;
+
+          text-align: right; /* по умолчанию выравнивание */
+  padding: 60px 0;
     }
     
     .hero__buttons {
@@ -909,7 +919,74 @@ h5 {
   box-shadow: 0 8px 16px rgba(18, 69, 199, 0.15);
 }
 
+.hero__subtitle--mobile {
+  display: inline-block;
+}
 
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+  .hero__subtitle--mobile::before {
+    content: "успех";
+    display: block;     /* переносим на новую строку */
+    margin-bottom: 4px; /* немного отступа */
+  }
 
+  .hero__subtitle--mobile {
+    content: "и богатство с помощью астрологии";
+  }
+}
+/* Общие стили для подзаголовка */
+.hero__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+}
+
+/* Слово "успех" — по умолчанию остаётся в строке */
+.hero__word-success {
+  display: inline;     /* стандартное поведение */
+  font-weight: 600;
+  white-space: normal;
+}
+
+/* ===== Мобильная версия ===== */
+@media (max-width: 768px) {
+
+  /* Сдвигаем весь hero вправо (через padding контейнера или отдельный отступ) */
+  .hero {
+    padding-left: 24px;     /* сдвиг вправо для всех элементов hero */
+    padding-right: 16px;
+    text-align: right;
+  }
+
+  /* Доп. сдвиг конкретно для заголовков/подзаголовков, если нужно */
+  .hero__title,
+  .hero__subtitle {
+    margin-left: 8px;
+  }
+
+  /* Делаем слово "успех" блочным — оно станет на отдельную строку */
+  .hero__word-success {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+
+  /* Уменьшаем размер шрифтов на телефонах */
+  .hero__title { font-size: 2.4rem; }
+  .hero__subtitle { font-size: 1.15rem; }
+  
+  /* Кнопки под заголовком — выровнять по левому краю (если нужно) */
+  .hero__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-left: 8px;
+  }
+}
 }
     
