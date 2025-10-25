@@ -644,6 +644,17 @@ ul {
         margin-top: -120px;
         visibility: hidden;
     }
+
+@media (max-width: 768px) {
+    @media (max-width: 768px) {
+    .hero {
+        background-size: contain; /* изображение полностью помещается */
+        background-repeat: no-repeat;
+        background-position: center top;
+        height: 83vh;
+    }
+}
+
 }
 
 
