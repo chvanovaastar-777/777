@@ -871,12 +871,12 @@ h5 {
 }
 
 .social-link img {
-    width: 10px;       /* фиксированный размер на ПК */
-    height: 10px;
-    max-width: 5px;   /* запрещаем браузеру увеличивать */
+    width: 30px;       /* фиксированный размер на ПК */
+    height: 30px;
+    max-width: 1px;   /* запрещаем браузеру увеличивать */
     max-height:20px;
     object-fit: contain;
-    transition: transform 0.3s;
+    transition: transform 0.5s;
 }
 
 /* Подпись о запрете Instagram */
