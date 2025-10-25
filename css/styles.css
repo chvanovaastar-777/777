@@ -616,7 +616,7 @@ ul {
         z-index: 1000;
         box-shadow: 0 6px 18px rgba(0,0,0,0.06);
     }
-
+@media (max-width: 768px) {
     .section-title::after {
         display: none; /* убираем подчеркивание на мобильных */
     }
@@ -637,7 +637,7 @@ ul {
     .logo { max-width: 150px; height: auto; position: relative; z-index: 2; }
 
     .social-link img { width: 64px; height: 64px; max-width: 170px; max-height: 170px; }
-
+}
 
 /* ===== Бургер-меню ===== */
 .menu-toggle {
