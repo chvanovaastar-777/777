@@ -386,7 +386,7 @@ ul {
 /* Консультации и стоимость */
 
 .menu {
-    padding: 80px 0;
+    padding: 80px 0;/* отступ над консультацией*/
     background-color: var(--white-color);
 }
 
@@ -394,14 +394,22 @@ ul {
     display: flex; /* Выстраивает кнопки в ряд */
     justify-content: center; /* Центрует их по горизонтали */
     margin-bottom: 30px; /* Отступ снизу */
-    gap: 100px; /* Расстояние между кнопками */
+    gap: 100 /* Расстояние между кнопками */
 }
 
+.menu__container {
+  max-width: 1200px; /* ограничиваем ширину содержимого */
+  margin: 0 auto; /* выравниваем по центру */
+  padding: 0 2rem; /* одинаковые отступы слева и справа */
+  box-sizing: border-box;
+}
+
+
 .tab-btn {
-    padding: 10px 20px; /* Внутренние отступы */
+    padding: 10px 10px; /* Внутренние отступы */
     background: none; /* Без фона */
     border: none; /* Без рамки */
-    border-bottom: 2px solid transparent; /* Линия снизу (невидимая по умолчанию) */
+    border-bottom: px solid transparent; /* Линия снизу (невидимая по умолчанию) */
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     font-size: 1rem;
@@ -426,27 +434,29 @@ ul {
 .menu__content.active {
     display: block; /* Отображается только активный */
 }
-
 .menu__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
-  align-items: stretch; /* Все карточки одинаковой высоты */
+  align-items: stretch;
+  padding: 0 2rem; /* одинаковые отступы слева и справа */
 }
 
 .menu-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* распределяет контент по вертикали */
-  background-color: #e7e6e6;/* цвет плашек услуг */
+  justify-content: space-between;
+  background-color: #e7e6e6;
   border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(18, 69, 199, 0.1);/* тень от плашек */
+  box-shadow: 0 4px 10px rgba(18, 69, 199, 0.1);
   padding: 1.5rem;
+  height: 100%; /* карточки одинаковой высоты */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .menu-item:hover {
-    transform: translateY(-2px); /* Легкий подъем при наведении */
-    box-shadow: var(--shadow); /* Тень при наведении */
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(18, 69, 199, 0.15);
 }
 
 
@@ -854,7 +864,41 @@ h5 {
         max-height: 35px;
     }
 }
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: start; /* фикс: не растягивать карточки одинаково */
+}
 
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #e7e6e6;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(18, 69, 199, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.menu-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(18, 69, 199, 0.15);
+}
+
+/* 📱 Мобильная адаптация */
+@media (max-width: 768px) {
+  .menu__grid {
+    grid-template-columns: 1fr; /* одна колонка */
+    gap: 1.5rem;
+  }
+
+  .menu-item {
+    transform: none !important; /* отключаем сдвиг при hover */
+  }
+}
 
 }
     
