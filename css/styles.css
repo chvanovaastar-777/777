@@ -1005,22 +1005,21 @@ h5 {
   overflow: hidden; /* предотвращает случайный сдвиг */
 }
 
-/* ====== Мобильная версия ====== */
 @media (max-width: 768px) {
   .hero {
-    background-size: cover;       /* не меняем масштаб, чтобы не съезжало */
-    background-position: center;  /* строго центрируем */
-    text-align: right;
-    padding-left: 1px;           /* надписи правее */
-    padding-right: 250px;
+    background-size: cover;       /* сохраняем пропорции */
+    background-position: center;  /* центрируем фон */
+    text-align: right;            /* текст выравниваем вправо */
+    padding-left: 10px;
+    padding-right: 60px;          /* чуть правее, но не чрезмерно */
   }
 
   .hero__title,
   .hero__subtitle {
-    margin-right: 150px;
+    margin-right: 150px;          /* добавлены px */
   }
 }
-
+}
 
 
 
