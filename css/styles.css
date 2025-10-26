@@ -768,7 +768,29 @@ ul {
         color: #222;
     }
 
+@media (max-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: row;      /* логотип и бургер — в одну линию */
+        justify-content: space-between; /* логотип слева, меню справа */
+        align-items: center;
+        padding: 10px 20px;
+    }
 
+    .logo {
+        position: relative;
+        left: 0;                  /* убираем центрирование */
+        text-align: left;         /* текст логотипа тоже влево */
+        margin: 0;                /* сбрасываем авто-отступы */
+    }
+
+    .menu-toggle {
+        position: relative;
+        right: 0;
+        top: 0;
+        transform: none;
+    }
+}
 
 }
 
