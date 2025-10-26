@@ -769,26 +769,55 @@ ul {
     }
 
 @media (max-width: 768px) {
+    /* Шапка */
     .header {
         display: flex;
-        flex-direction: row;      /* логотип и бургер — в одну линию */
-        justify-content: space-between; /* логотип слева, меню справа */
+        flex-direction: row;           /* элементы в строку */
+        justify-content: space-between;/* логотип слева, бургер справа */
         align-items: center;
         padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: var(--white-color);
+        box-shadow: var(--shadow);
     }
 
+    /* Логотип слева */
     .logo {
+        margin: 0;
+        text-align: left;
         position: relative;
-        left: 0;                  /* убираем центрирование */
-        text-align: left;         /* текст логотипа тоже влево */
-        margin: 0;                /* сбрасываем авто-отступы */
+        left: 0;
     }
 
+    /* Бургер справа */
     .menu-toggle {
+        display: flex;
         position: relative;
         right: 0;
         top: 0;
         transform: none;
+        margin-left: auto; /* отталкивает от логотипа вправо */
+        width: 35px;
+        height: 25px;
+        flex-direction: column;
+        justify-content: space-between;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1100;
+        padding: 0;
+    }
+
+    .menu-toggle__line {
+        height: 3px;
+        border-radius: 2px;
+        background: #868689;
+        transition: transform 0.3s ease, opacity 0.3s ease;
     }
 }
 
