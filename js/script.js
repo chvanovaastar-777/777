@@ -44,3 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
     window.scrollTo(0, 0);
 });
+
+// дата в подвале
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const today = new Date().toLocaleDateString('ru-RU', options);
+  document.getElementById("current-date").textContent = `Сегодня: ${today}`;
+
+
