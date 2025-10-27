@@ -324,7 +324,7 @@ ul {
 .about__content {
     text-align: center;
     margin: 0 auto
-    flex: 1 1 300px;
+    flex: 1 1 250px;
     
 }
 
@@ -432,7 +432,7 @@ ul {
       display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* адаптивные колонки */
   justify-content: center;  /* центрируем всю сетку */
-  gap: 2rem;                /* расстояние между карточками */
+  gap: 4rem;                /* расстояние между карточками */
   padding: 0 2rem;          /* отступы от краёв экрана */
   align-items: start;       /* выравнивание карточек по верхнему краю */
   box-sizing: border-box;
