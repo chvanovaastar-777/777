@@ -67,7 +67,9 @@ ul {
 }
 
 .btn--primary {
-    display: block;
+     display: flex;                /* используем флекс-контейнер */
+    justify-content: center;      /* горизонтальное выравнивание по центру */
+    align-items: center;          /* вертикальное выравнивание по центру */
     margin: 0 auto;
     background-color: #382f77;
     color: var(--white-color);
@@ -77,6 +79,9 @@ ul {
     cursor: pointer;
     transition: var(--transition);
     box-shadow: var(--shadow);
+    width: 170px;
+    height: 40px;
+    text-decoration: none;        /* чтобы убрать подчеркивание у <a> */
 }
 
 .btn--primary:hover {
@@ -596,6 +601,10 @@ ul {
 .social-link {
     flex: 0 0 auto;
 }
+
+
+
+
 
 .social-link img {
     width: 30px;
