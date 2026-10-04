@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="В гостях у Тани — путешествия, картины и истории в одной интерактивной комнате.">
+  <title>В гостях у Тани</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">К содержанию</a>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="В гостях у Тани — главная">В гостях у Тани<span>♡</span></a>
+    <p class="tagline">Путешествия, картины и истории — в одной комнате.</p>
+    <nav class="desktop-nav" aria-label="Главное меню">
+      <a href="#home">Моя комната</a><a href="#about">Обо мне</a><a class="pill" href="#contact">Написать</a>
+    </nav>
+    <button class="menu-button" aria-label="Открыть меню" aria-expanded="false">☰</button>
+  </header>
+
+  <main id="main">
+    <section id="home" class="room page active" aria-labelledby="home-title">
+      <img class="room-photo" src="assets/room-hero.png" alt="Солнечная творческая комната Тани">
+      <div class="hero-copy"><h1 id="home-title">Привет, я Таня.<br>Заходи, покажу мой мир.</h1><p>Нажимай на предметы — открывай истории.</p></div>
+      <a class="hotspot hs-paintings" href="#paintings"><b>＋</b> Картины</a>
+      <a class="hotspot hs-photos" href="#photos"><b>＋</b> Фотографии</a>
+      <a class="hotspot hs-travel" href="#travel"><b>＋</b> Путешествия</a>
+      <a class="hotspot hs-style" href="#style"><b>＋</b> Мой стиль</a>
+      <a class="hotspot hs-personal" href="#personal"><b>⌑</b> Личное <small>скоро</small></a>
+      <a class="hotspot hs-contact" href="#contact"><b>＋</b> Написать мне</a>
+    </section>
+
+    <section id="paintings" class="page panel-page" data-title="Картины" data-subtitle="Цвета, в которых я оставляю настроение."></section>
+    <section id="photos" class="page panel-page" data-title="Фотографии" data-subtitle="Моменты, которые хочется сохранить."></section>
+    <section id="travel" class="page panel-page" data-title="Путешествия" data-subtitle="Истории из моего воображаемого атласа."></section>
+    <section id="style" class="page panel-page" data-title="Мой стиль" data-subtitle="Примеряю настроение, а не правила."></section>
+    <section id="about" class="page panel-page prose-page" data-title="Привет, я Таня ♡" data-subtitle="Мне 22 года, я бесконечно влюблена в путешествия, искусство, фотографию и людей."></section>
+    <section id="personal" class="page panel-page personal-page" data-title="Личное" data-subtitle="Истории, которые я оставляю для близкого круга."></section>
+    <section id="love" class="page panel-page story-page" data-title="Любовные истории ♡" data-subtitle="Настоящие чувства, тёплые воспоминания и то, что остаётся в сердце."></section>
+    <section id="behind" class="page panel-page story-page" data-title="За кадром" data-subtitle="Между дублями — настоящие эмоции."></section>
+    <section id="contact" class="page panel-page form-page" data-title="Написать мне" data-subtitle="Расскажи мне свою историю — я буду рада твоему письму."></section>
+    <section id="collab" class="page panel-page form-page" data-title="Создадим что-нибудь красивое? ♡" data-subtitle="Для брендов, маркетплейсов и интернет-магазинов."></section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Разделы">
+    <a href="#paintings">▧<span>Картины</span></a><a href="#photos">▣<span>Фото</span></a><a href="#travel">✈<span>Путешествия</span></a><a href="#style">♙<span>Мой стиль</span></a><a href="#personal">▢<span>Личное</span></a><a href="#contact">✉<span>Написать</span></a><a href="#collab">▤<span>Сотрудничество</span></a>
+  </nav>
+
+  <dialog id="lightbox" aria-label="Просмотр изображения"><button class="close" aria-label="Закрыть">×</button><button class="prev" aria-label="Предыдущее изображение">‹</button><img alt=""><button class="next" aria-label="Следующее изображение">›</button><p></p></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
+
