@@ -1,0 +1,92 @@
+[
+  {
+    "file": "paintings/01_sea_notebook.png",
+    "title": "Море в моём блокноте",
+    "prompt": "A beautiful expressive gouache painting of a Mediterranean coastal village, blue sea, warm terracotta houses, flowering terraces; full-bleed artwork, handmade brushwork and paper grain."
+  },
+  {
+    "file": "paintings/02_morning_flowers.png",
+    "title": "Утренние цветы",
+    "prompt": "An expressive oil painting of blush peonies and white daisies in a ceramic vase on a sunlit cream windowsill, lively impasto brushwork; full-bleed artwork."
+  },
+  {
+    "file": "paintings/03_streets_with_history.png",
+    "title": "Улочки с историей",
+    "prompt": "An atmospheric watercolor painting of an old warm ochre European alley with arches, flowerpots, distant domed church, textured paper and delicate brushwork; full-bleed artwork."
+  },
+  {
+    "file": "photos/01_window_light.png",
+    "title": "Свет у окна",
+    "prompt": "Natural editorial photograph of Tanya in a cream knitted top sitting sideways by a tall sunlit studio window, turning her face toward camera with a quiet smile, believable freckles, authentic skin texture."
+  },
+  {
+    "file": "photos/02_salt_and_sun.png",
+    "title": "Соль и солнце",
+    "prompt": "Natural travel photograph of sparkling blue Mediterranean waves meeting a pale rocky shore, sea spray, warm sun, dreamy but realistic; no people."
+  },
+  {
+    "file": "photos/03_city_details.png",
+    "title": "Городские детали",
+    "prompt": "Natural travel photograph close view of terracotta wall, faded teal wooden door and blooming bougainvillea in a Mediterranean alley, sophisticated warm color grading; no people."
+  },
+  {
+    "file": "photos/04_warm_evening.png",
+    "title": "Тёплый вечер",
+    "prompt": "Natural editorial photograph of Tanya on a balcony at sunset in a rust-colored cotton dress, relaxed three-quarter profile looking toward distant blue sea, wind in chestnut bangs, candid smile."
+  },
+  {
+    "file": "photos/05_small_joys.png",
+    "title": "Маленькие радости",
+    "prompt": "Natural still-life photograph of a small coffee cup, two apricots, daisies and vintage camera on a wooden cafe table in dappled sunlight, charming tactile everyday details; no people."
+  },
+  {
+    "file": "photos/06_home_in_frame.png",
+    "title": "Дом в кадре",
+    "prompt": "Natural interior photograph of Tanya's cozy artist room: tall sunlit window, climbing plants, paint brushes, wooden easel, books and fluffy tabby cat asleep on rug; no person."
+  },
+  {
+    "file": "travel/01_sea_notebook.png",
+    "title": "Море в моём блокноте",
+    "prompt": "Realistic scenic travel photograph of a Mediterranean coastal village above a blue bay with boats and bougainvillea framing the foreground, golden afternoon sunlight; no people."
+  },
+  {
+    "file": "travel/02_warm_city.png",
+    "title": "Город в тёплых тонах",
+    "prompt": "Realistic editorial travel photograph of Tanya exploring a warm ochre old city street, in striped cotton shirt, loose trousers and small brown crossbody bag, walking and looking back laughing; authentic candid."
+  },
+  {
+    "file": "travel/03_quiet_mountains.png",
+    "title": "Горы, которые дышат тишиной",
+    "prompt": "Realistic landscape photograph of dramatic mountain peaks, turquoise alpine lake and grasses, mist and soft morning sunlight, calm photographic texture; no people."
+  },
+  {
+    "file": "style/01_linen_day.png",
+    "title": "Льняной день",
+    "prompt": "Photorealistic editorial fashion photograph of Tanya standing beside a sunlit wall wearing a white linen button-up shirt with sleeves rolled, pale beige wide-leg linen trousers, small woven bag; full outfit, relaxed cheerful stance."
+  },
+  {
+    "file": "style/02_evening_mood.png",
+    "title": "Вечерний настрой",
+    "prompt": "Photorealistic sophisticated fashion photograph of Tanya in a modest elegant black midi dress on a softly lit restaurant terrace, adult confident smile, standing three-quarter pose, warm candlelit background; full outfit."
+  },
+  {
+    "file": "style/03_city_rhythm.png",
+    "title": "В ритме города",
+    "prompt": "Photorealistic street fashion photograph of Tanya walking in a taupe blazer over white tee, blue straight jeans and white sneakers, small brown bag, playful candid expression, full outfit, warm old-city backdrop."
+  },
+  {
+    "file": "personal/01_love_stories.png",
+    "title": "Любовные истории",
+    "prompt": "Photorealistic intimate but fully clothed lifestyle portrait of Tanya reading a handwritten letter at a cozy wooden desk by the window, burgundy knitted sweater, wistful gentle smile, candle and dried flowers, atmospheric warm evening."
+  },
+  {
+    "file": "personal/02_behind_scenes.png",
+    "title": "За кадром",
+    "prompt": "Photorealistic black-and-white editorial behind-the-scenes photograph of Tanya fully dressed in a white blouse sitting at a dressing-room mirror, adjusting an earring with a cheerful candid expression; professional fashion backstage, film grain."
+  },
+  {
+    "file": "personal/03_special_photo_stories.png",
+    "title": "Особые фотоистории",
+    "prompt": "Photorealistic tasteful vacation fashion photograph of adult 22-year-old Tanya in an opaque teal one-piece swimsuit with a light linen shirt draped over her shoulders standing on a sunny beach, natural confident smile, sea backdrop, normal fashion catalogue pose, medium-long shot."
+  }
+]
